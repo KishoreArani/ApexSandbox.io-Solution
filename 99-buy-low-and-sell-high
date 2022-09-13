@@ -1,0 +1,26 @@
+public Integer maxProfit(List<Integer> prices){
+    Integer n = prices.size();
+
+    Integer max = -2147483647;
+    Integer min = 2147483647;
+
+    Integer profit = 0;
+    Integer minIndex = -1;
+
+    for(Integer i=0;i<n;i++){
+        if(prices[i] < min){
+            minIndex = 1;
+            min = prices[i];
+        }
+
+        if(prices[i] > min){
+            max = prices[i];
+
+            if(minIndex != -1){
+                profit = math.max(profit, max-min);
+            }
+        }
+    }
+
+    return profit;
+}
