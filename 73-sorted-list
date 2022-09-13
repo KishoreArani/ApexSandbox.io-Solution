@@ -1,0 +1,25 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+    boolean ascending=true,descending=true;
+
+    Integer n = numbers.size();
+
+    if(n < 3){
+        return true;
+    }
+    
+    for(Integer i = 1;i<n;i++){
+        if(numbers[i-1] > numbers[i]){
+            descending = false;
+        }
+
+        if(numbers[i-1] < numbers[i]){
+            ascending = false;
+        }
+    }
+    if(ascending || descending){
+        return true;
+    }
+
+    return false;
+}
