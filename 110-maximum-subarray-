@@ -1,0 +1,23 @@
+public static Integer maxSubArraySum(List<Integer> nums, Integer target){
+//code here
+Integer sum = 0;
+for(Integer i =0;i<target;i++){
+    sum += nums[i];
+}
+
+Integer maxArray = sum;
+Integer left = 1;
+Integer right = target;
+
+while(right < nums.size()){
+    sum = sum - nums[left-1] + nums[right];
+    left += 1;
+    right += 1;
+    if(sum > maxArray){
+        maxArray = sum;
+    }
+}
+
+return maxArray;
+
+}
