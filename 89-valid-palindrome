@@ -1,0 +1,20 @@
+public Boolean isPalindrome(String str){
+    Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
+    Matcher matcher = nonAlphanumeric.matcher(str);
+    str = matcher.replaceAll('');
+    List<String> tempString = str.split('');
+
+    Integer right = str.length() - 1;
+    Integer left = 0;
+
+    while(left <= right){
+        if(tempString[left] != tempString[right]){
+            return false;
+        }
+        left += 1;
+        right -= 1;
+    }
+
+    return true;
+
+}
