@@ -1,0 +1,14 @@
+public void setAccountRating(Account a) {
+    //code here
+    if(a.AnnualRevenue != Null){
+        if(a.AnnualRevenue <= 100000){
+            a.rating = 'Cold';
+        }
+        else if(a.AnnualRevenue > 100000 && a.AnnualRevenue <= 500000){
+            a.rating = 'Warm';
+        }
+        else{
+            a.rating = 'Hot';
+        }
+    }
+}
