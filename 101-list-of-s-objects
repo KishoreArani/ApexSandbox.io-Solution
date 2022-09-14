@@ -1,0 +1,14 @@
+public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+{
+    List<sObject> result = new List<sObject>();
+
+    for(sObject sobj : accounts){
+        result.add(sobj);
+    }
+
+    for(sObject sobj : contacts){
+        result.add(sobj);
+    }
+
+    return result;
+}
