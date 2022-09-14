@@ -6,7 +6,7 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
         if(acc.field != null){
             result.add(acc.field);
         }
-        result.add(null);
+        else {result.add(null);}
     }
 
     return result;
