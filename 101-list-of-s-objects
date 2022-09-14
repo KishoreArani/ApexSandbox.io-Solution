@@ -2,12 +2,16 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 {
     List<sObject> result = new List<sObject>();
 
-    for(sObject sobj : accounts){
-        result.add(sobj);
+    if(accounts.size() > 0){
+        for(sObject sobj : accounts){
+            result.add(sobj);
+        }
     }
 
-    for(sObject sobj : contacts){
-        result.add(sobj);
+    if(contacts.size() > 0){
+        for(sObject sobj : contacts){
+            result.add(sobj);
+        }
     }
 
     return result;
