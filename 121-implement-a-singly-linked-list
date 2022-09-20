@@ -23,6 +23,8 @@ public class LinkedList{
         Integer element = this.head.data;
         this.head = this.head.next;
         this.count -= 1;
+
+        return element;
     
 
     }
@@ -31,15 +33,15 @@ public class LinkedList{
             Node newNode = Node(value);
             this.head = newNode;
             this.count += 1;
-        }
-
-        Node temp = this.head;
+        }else{
+            Node temp = this.head;
         while(temp.next != null){
             temp = temp.next;
         }
 
         temp.next = Node(value);
         this.count += 1;
+        }
     }
     public Integer removeFromTail(){
         if(this.size() == 0){
