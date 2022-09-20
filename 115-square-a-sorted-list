@@ -13,21 +13,5 @@ public static List<Integer> squareList(List<Integer> nums){
     if(flag == 0){
         return nums;
     }
-    else if(flag == 1){
-        Integer left = 0;
-        Integer right = n-1;
-        while(left < right){
-            if(nums[left] < nums[right]){
-                right -= 1;
-            }
-            else if(nums[left] > nums[right]){
-                Integer temp = nums[right];
-                nums[right] = nums[left];
-                nums[left] = temp;
-                left += 1;
-            }
-        }
-    }
-
-    return nums;
+    return nums.sort();
 }
