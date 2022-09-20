@@ -1,0 +1,72 @@
+public class LinkedList{
+    public Node head;
+    private Integer count;
+    public void LinkedList(){
+        this.head = null;
+        this.count = 0;
+    }
+    public void addToFront(Integer value){
+        if(this.head == null){
+            this.head = Node(value);
+            this.count += 1;
+        }else{
+            Node newNode = Node(value)
+            newNode.next = this.head;
+            this.head = newNode;
+            this.count += 1;
+        }
+    }
+    public Integer removeFromFront(){
+        if(this.size() == 0){
+            return null;
+        }
+        Integer element = this.head.data;
+        this.head = this.head.next;
+        this.count -= 1;
+    
+
+    }
+    public void addToTail(Integer value){
+        if(this.size() == 0){
+            Node newNode = Node(value);
+            this.head = newNode;
+            this.count += 1;
+        }
+
+        Node temp = this.head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = Node(value);
+        this.count += 1;
+    }
+    public Integer removeFromTail(){
+        if(this.size() == 0){
+            return null;
+        }
+
+        Node temp = this.head;
+        Node prev;
+        while(temp.next != null){
+            prev = temp;
+            temp = temp.next;
+        }
+        Integer element = temp.data;
+        prev.next = null;
+        this.count -= 1;
+        return element;
+    }
+    public Integer size(){
+        return this.count;
+    }    
+}
+
+public class Node{
+    Integer data;
+    Node next;
+    public void Node(Integer value){
+        this.data = value;
+        this.next = null;
+    }
+}
