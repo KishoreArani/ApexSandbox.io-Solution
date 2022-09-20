@@ -14,8 +14,8 @@ public static List<Integer> squareList(List<Integer> nums){
         return nums;
     }
     else if(flag == 1){
-        left = 0;
-        right = n-1;
+        Integer left = 0;
+        Integer right = n-1;
         while(left < right){
             if(nums[left] < nums[right]){
                 left += 1;
