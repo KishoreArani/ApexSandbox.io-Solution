@@ -1,16 +1,16 @@
 public class LinkedList{
     public Node head;
     private Integer count;
-    public void LinkedList(){
+    public LinkedList(){
         this.head = null;
         this.count = 0;
     }
     public void addToFront(Integer value){
         if(this.head == null){
-            this.head = Node(value);
+            this.head = new Node(value);
             this.count += 1;
         }else{
-            Node newNode = Node(value)
+            Node newNode = new Node(value);
             newNode.next = this.head;
             this.head = newNode;
             this.count += 1;
@@ -30,7 +30,7 @@ public class LinkedList{
     }
     public void addToTail(Integer value){
         if(this.size() == 0){
-            Node newNode = Node(value);
+            Node newNode = new Node(value);
             this.head = newNode;
             this.count += 1;
         }else{
@@ -39,7 +39,7 @@ public class LinkedList{
             temp = temp.next;
         }
 
-        temp.next = Node(value);
+        temp.next = new Node(value);
         this.count += 1;
         }
     }
@@ -61,14 +61,13 @@ public class LinkedList{
     }
     public Integer size(){
         return this.count;
-    }    
+    }   
 }
 
 public class Node{
-    Integer data;
-    Node next;
-    public void Node(Integer value){
+    public Integer data{ get; private set; }
+    public Node next;
+    public Node(Integer value){
         this.data = value;
-        this.next = null;
     }
 }
