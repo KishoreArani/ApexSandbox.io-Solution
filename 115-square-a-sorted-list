@@ -13,5 +13,6 @@ public static List<Integer> squareList(List<Integer> nums){
     if(flag == 0){
         return nums;
     }
-    return nums.sort();
+    nums.sort();
+    return nums;
 }
