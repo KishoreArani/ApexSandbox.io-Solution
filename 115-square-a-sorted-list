@@ -29,6 +29,7 @@ public static List<Integer> squareList(List<Integer> nums){
                 right -= 1;
             }
         }
-    return nums;
     }
+
+    return nums;
 }
