@@ -1,0 +1,31 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+
+    Integer count = 0;
+    Integer n = numbers.size();
+    for(Integer i =0;i <n;i++){
+        if(Math.mod(numbers[i],2) == 0){
+            count += 1;
+        }
+    }
+    Integer left = 0;
+    Integer right = n-1;
+    while(left < right){
+        if(Math.mod(numbers[left],2) == 0){
+            left += 1;
+        }else if(Math.mod(numbers[left],2) == 1){
+            if(Math.mod(numbers[right],2) == 0){
+                Integer temp = numbers[right];
+                numbers[right] = numbers[left];
+                numbers[left] = temp;
+                left += 1;
+                right -= 1;
+            }
+            else if(Math.mod(numbers[right],2) == 1){
+                right -= 1;
+            }
+        }
+    }
+
+
+    //code here
+}
