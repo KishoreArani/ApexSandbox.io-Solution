@@ -47,6 +47,12 @@ public class LinkedList{
         if(this.size() == 0){
             return null;
         }
+        if(this.size() == 1){
+            Integer element = this.head.data;
+            this.head = null;
+            this.count -= 1;
+            return element;
+        }
 
         Node temp = this.head;
         Node prev;
@@ -61,7 +67,7 @@ public class LinkedList{
     }
     public Integer size(){
         return this.count;
-    }   
+    }  
 }
 
 public class Node{
