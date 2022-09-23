@@ -1,12 +1,12 @@
 public List<Account> getAccounts(List<Account> accounts) {
     // code here
-
-    return SortClass.sortAccounts(accounts);
+    SortClass sc = new SortClass();
+    return sc.sortAccounts(accounts);
 }
 // write extra class here 
 
 public class SortClass implements Comparable{
-    public static List<Account> sortAccounts(List<Account> accounts){
+    public List<Account> sortAccounts(List<Account> accounts){
         accounts.sort();
 
         return accounts;
