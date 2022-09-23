@@ -11,8 +11,9 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        if(isEmpty()) 
-        return -1;
+        if(isEmpty()){
+            return -1;
+        }
 
         object obj1 = stack.remove(count-1);
         count -= 1;
@@ -25,8 +26,10 @@ public class Stack {
     }
     
     public Object peek(){
-        if(isEmpty())
-        return -1;
+        if(isEmpty()){
+            return -1;
+        }
+        
 
         return stack[count-1];
         //implement peek
@@ -34,6 +37,9 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
-        return count == 0;
+        if(count == 0){
+            return true;
+        }
+        return false;
     }
 }
