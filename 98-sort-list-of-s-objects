@@ -14,10 +14,10 @@ public class SortClass implements Comparable{
     public Integer compareTo(Object compareTo) {
         Account acc = (Account) compareTo;
 
-        if(this.AnnualRevenue > acc.AnnualRevenue){
+        if(AnnualRevenue > acc.AnnualRevenue){
             return 1;
         }
-        else if(this.AnnualRevenue < acc.AnnualRevenue){
+        else if(AnnualRevenue < acc.AnnualRevenue){
             return -1;
         }       
         else{
