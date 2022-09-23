@@ -3,8 +3,8 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
 
     Integer n = numbers.size();
 
-    Integer max = 0
-    Integer count = 0
+    Integer max = 0;
+    Integer count = 0;
     for(Integer i = 0;i<n;i++){
         if(numbers[i] == 1){
             count += 1
