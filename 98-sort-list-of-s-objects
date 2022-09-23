@@ -1,0 +1,27 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    // code here
+
+    return SortClass.sortAccounts(accounts);
+}
+// write extra class here 
+
+public class SortClass implements Comparable{
+    public static List<Account> sortAccounts(List<Account> accounts){
+        accounts.sort();
+
+        return accounts;
+    }
+    public Integer compareTo(Object compareTo) {
+        Account acc = (Account) compareTo;
+
+        if(this.AnnualRevenue > acc.AnnualRevenue){
+            return 1;
+        }
+        else if(this.AnnualRevenue < acc.AnnualRevenue){
+            return -1;
+        }       
+        else{
+            return 0;
+        }
+    }
+}
