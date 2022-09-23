@@ -1,0 +1,39 @@
+public class Stack {
+    private List<Object> stack = new List<Object>();
+    private count = 0;
+
+    
+    public void push(Object obj) {
+        //implement push
+        stack.add(obj);
+        count += 1;
+    }
+    
+    public Object pop() {
+        //implement pop
+        if(isEmpty()) 
+        return -1;
+
+        object obj1 = stack.remove(count-1);
+        count -= 1;
+
+    }
+    
+    public Integer size() {
+        return count;
+        //implement size
+    }
+    
+    public Object peek(){
+        if(isEmpty())
+        return -1;
+
+        return stack[count-1];
+        //implement peek
+    }
+    
+    public Boolean isEmpty() {
+        //implement isEmpty
+        return count == 0;
+    }
+}
