@@ -1,6 +1,6 @@
 public class Stack {
     private List<Object> stack = new List<Object>();
-    private count = 0;
+    private Integer count = 0;
 
     
     public void push(Object obj) {
@@ -17,6 +17,7 @@ public class Stack {
 
         object obj1 = stack.remove(count-1);
         count -= 1;
+        return obj1;
 
     }
     
